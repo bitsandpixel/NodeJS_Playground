@@ -57,9 +57,9 @@ server.listen(3000, () => {
  */
 
 //Using an external module created calc.js
-const calc = require('./calc.js');
+/* const calc = require('./calc.js');
 const result = calc.add(4, 5);
 const mulResult = calc.mul(4, 5);
 
 console.log('the result is: ' + result);
-console.log('Multiplication is: ' + mulResult);
+console.log('Multiplication is: ' + mulResult); */
