@@ -1,0 +1,1 @@
+Once an asynchronous I/O operation completes, Node.js is notified, and a pre-registered callback function associated with that operation is placed in the event queue. When the event loop is free, it picks up this callback and executes it, handling the result of the I/O operation.

@@ -13,7 +13,21 @@ createServer is a function available in HTTP
 // loads and imports the built-in HTTP module.
 This module provides functionalities for creating and managing HTTP servers and clients within a Node.js application
 */
-var http = require('http');
+/* const fs = require('fs');
+
+console.log('Starting file read...');
+
+fs.readFile('example.txt', 'utf8', (err, data) => {
+  if (err) {
+    console.error('Error reading file:', err);
+    return;
+  }
+  console.log('File content:', data);
+});
+
+console.log('File read initiated, continuing with other tasks...'); */
+
+/* var http = require('http');
 http
   .createServer(function (req, res) {
     // res.write('Welcome Back GuyS!!!');
@@ -40,3 +54,12 @@ const server = httpa.createServer((req, res) => {
 server.listen(3000, () => {
   console.log('Server listening on port 3000');
 });
+ */
+
+//Using an external module created calc.js
+const calc = require('./calc.js');
+const result = calc.add(4, 5);
+const mulResult = calc.mul(4, 5);
+
+console.log('the result is: ' + result);
+console.log('Multiplication is: ' + mulResult);
