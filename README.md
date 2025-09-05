@@ -34,3 +34,6 @@
   `<variable-name>.<function-name>`
 
 * If we write `fs.writeFile('<file-name>')` this function will wipe out existing content in that file. So, to append the latest data we need to use `fs.appendFile('<file-name>')` function
+
+* `https://www.npmjs.com/package/nodemon` - to automatically restart the node server everytime we make a change and save it instead of restarting the server after each change using `node <file-name>`, we need to install `nodemon` module. Either install it locally using `npm i nodemon` or install it globally using `npm install or i -g nodemon`
+  - once we install it run the script with `nodemon <file-name>` instead of `node <file-name>`
