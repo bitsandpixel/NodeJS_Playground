@@ -32,3 +32,5 @@
   then call `var <varible-name> = require('<module-name>.js)`
   and access the functions of it using
   `<variable-name>.<function-name>`
+
+* If we write `fs.writeFile('<file-name>')` this function will wipe out existing content in that file. So, to append the latest data we need to use `fs.appendFile('<file-name>')` function

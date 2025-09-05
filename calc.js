@@ -13,3 +13,7 @@ exports.mul = function mul(a, b) {
 
 module.exports.add = add; //one way to export
 exports.sub = sub; //another way because behind the scenes exports = module.exports shorthand is created
+
+exports.isEven = function isEven(a) {
+  return a % 2 == 0;
+};

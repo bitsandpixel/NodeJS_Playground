@@ -5,31 +5,14 @@
 // console.log('Hello World');
 // console.log('The sum of two numbers is: ' + c);
 
-/* 
-createServer is a function available in HTTP
-*/
-
 /*
 // loads and imports the built-in HTTP module.
 This module provides functionalities for creating and managing HTTP servers and clients within a Node.js application
 */
-/* const fs = require('fs');
-
-console.log('Starting file read...');
-
-fs.readFile('example.txt', 'utf8', (err, data) => {
-  if (err) {
-    console.error('Error reading file:', err);
-    return;
-  }
-  console.log('File content:', data);
-});
-
-console.log('File read initiated, continuing with other tasks...'); */
 
 /* var http = require('http');
 http
-  .createServer(function (req, res) {
+  .createServer(function (req, res) { //createServer is a function available in HTTP
     // res.write('Welcome Back GuyS!!!');
     // res.end();
     //for the last line you can simply write res.end instead of ending it in a seperate line.
@@ -56,6 +39,20 @@ server.listen(3000, () => {
 });
  */
 
+/* const fs = require('fs');
+
+console.log('Starting file read...');
+
+fs.readFile('example.txt', 'utf8', (err, data) => {
+  if (err) {
+    console.error('Error reading file:', err);
+    return;
+  }
+  console.log('File content:', data);
+});
+
+console.log('File read initiated, continuing with other tasks...'); */
+
 //Using an external module created calc.js
 /* const calc = require('./calc.js');
 const result = calc.add(4, 5);
@@ -63,3 +60,46 @@ const mulResult = calc.mul(4, 5);
 
 console.log('the result is: ' + result);
 console.log('Multiplication is: ' + mulResult); */
+
+//using File System module to read a file
+
+var fs = require('fs');
+/*console.log('Started reading file');
+fs.readFile('./calc.js', 'utf8', function (err, data) {
+  if (err) {
+    console.log('Error reading file: \n', err);
+    return;
+  }
+  console.log('File content: \n', data);
+}); */
+
+//using File system module to write a file
+
+/* fs.writeFile(
+  'calx.js',
+  'console.log("writing a new file")',
+  'utf8',
+  function (err) {
+    console.log('new file has been created');
+  }
+); */
+
+//using file system's appendFile function
+
+/* fs.appendFile(
+  'calc.js',
+  '\n\nexports.isEven = function isEven(a){return a/2==0;}',
+  'utf8',
+  function (err) {
+    console.log('isEven function is added calculator module');
+  }
+); */
+
+/* const calc = require('./calc.js');
+const result = calc.isEven(20);
+console.log('is 20 an even number:' + result); */
+
+//Using file system unlink function to delete a file - calx.js
+fs.unlink('calx.js', function (err) {
+  console.log('Deleted calx.js file');
+});
