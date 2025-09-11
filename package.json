@@ -2,5 +2,10 @@
   "dependencies": {
     "express": "^5.1.0",
     "nodemon": "^3.1.10"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch --watch-preserve-output server js "
   }
+
 }

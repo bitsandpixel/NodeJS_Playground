@@ -2,7 +2,9 @@ const express = require('express');
 const exp = express();
 const PORT = 9000;
 
-// Creating a simple data source
+/**
+ * Creating a simple data source
+ */
 const users = {
   20: 'Welcome X',
   21: 'Welcome Y',
@@ -35,6 +37,9 @@ exp.get('/welcome', function (req, res) {
   }
 });
 
+/**
+ * 
+ */
 exp.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
