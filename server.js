@@ -32,19 +32,20 @@ app.get('/', (req,res)=>{
      * you can use
      */
     // res.download("README.md")
-res.render('index')
+
     /**
-     * 
+     * To pass information from server to views, we have to add second parameter to render function
+     * @param index is a view
+     * @param object
      */
-
-
-
+res.render('index', {text:'world'})
 })
 
-app.get('/welcome', (req,res)=>{
-    console.log("Entered /welcome folder")
-    res.json({ message: 'Welcome to the folder' })
-})
+const userRouter = require('./routes/users')
+app.use('/users', userRouter)
+
+const welcomeRouter = require('./routes/welcome')
+app.use('/welcome', welcomeRouter)
 /**
  * our server is listening on given port-number
  */
